@@ -1,0 +1,6 @@
+tmp/
+sstate-cache/
+downloads/
+cache/
+*.log
+*.lock
