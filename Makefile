@@ -1,0 +1,2 @@
+all:
+	bitbake my-image
