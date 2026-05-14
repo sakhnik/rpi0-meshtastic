@@ -10,3 +10,9 @@
 [submodule "meta-meshtastic"]
 	path = meta-meshtastic
 	url = https://github.com/buildroot-meshtastic/meta-meshtastic
+[submodule "meta-rauc"]
+	path = meta-rauc
+	url = https://github.com/rauc/meta-rauc.git
+[submodule "meta-rauc-community"]
+	path = meta-rauc-community
+	url = https://github.com/leon-anavi/meta-rauc-community.git
