@@ -8,16 +8,12 @@ IMAGE_INSTALL:append = " \
   iw \
   wireless-regdb \
   wifi-config \
-  busybox \
-  init-runtime \
-"
-
-IMAGE_INSTALL:remove = " \
-  bluez5 \
 "
 
 IMAGE_FEATURES += "ssh-server-dropbear"
 DROPBEAR_EXTRA_ARGS = "-s"
+
+IMAGE_INSTALL:append = " dropbear"
 
 ROOTFS_POSTPROCESS_COMMAND += "setup_dropbear_keys;"
 
