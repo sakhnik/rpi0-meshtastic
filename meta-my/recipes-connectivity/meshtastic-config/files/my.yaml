@@ -1,0 +1,17 @@
+Lora:
+  Module: sx1262  # Waveshare SX126X XXXM
+  spiDevice: /dev/spidev0.0
+  DIO2_AS_RF_SWITCH: true
+  IRQ: 23
+  Busy: 24
+  Reset: 25
+  SX126X_ANT_SW: 6
+
+Webserver:
+  Port: 9443
+
+General:
+  MACAddressSource: wlan0
+
+Logging:
+  LogLevel: warn # debug, info, warn, error
