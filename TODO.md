@@ -1,3 +1,3 @@
-- symlink /root -> /home/root
 - symlink dropbear config to /data
 - web ui
+- timezone
