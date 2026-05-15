@@ -1,2 +1,2 @@
 all:
-	bitbake my-image
+	bitbake my-bundle
