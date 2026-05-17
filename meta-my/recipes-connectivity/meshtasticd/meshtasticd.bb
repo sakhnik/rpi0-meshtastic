@@ -7,18 +7,16 @@ LIC_FILES_CHKSUM = " \
     file://LICENSE;subdir=platform-native;md5=8f0e2cd40e05189ec81232da84bd6e1a \
 "
 
-PV = "2.6.11"
+PV = "v2.7.15.567b8ea"
 
 SRCREV_FORMAT = "meshtastic_platform"
-SRCREV_meshtastic = "60ec05e53693535aaf616162d4f970cfca6a5d58"
+SRCREV_meshtastic = "d18f3f7a658817b35a3ab746d8522c1136890785"
 SRCREV_platform = "622341c6de8a239704318b10c3dbb00c21a3eab3"
 
 SRC_URI = " \
     git://github.com/meshtastic/firmware.git;branch=develop;protocol=https;submodules=1;name=meshtastic \
     git://github.com/meshtastic/platform-native.git;branch=develop;protocol=https;destsuffix=platform-native;name=platform \
-    file://002-remove-host-include.patch \
-    file://003-portduino-buildroot-board.patch \
-    file://004-platformio-link-group.patch \
+    file://0001-fix-build.patch \
     file://meshtasticd.service \
     file://meshtasticd.avahi.xml \
     file://config.d/luckfox_pico-lora-rfsw-tcxo.yaml \

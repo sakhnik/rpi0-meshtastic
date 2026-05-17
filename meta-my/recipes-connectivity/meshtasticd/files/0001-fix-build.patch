@@ -1,0 +1,33 @@
+From f8c0c782ec456c384e13e2e3a29a00a78d333445 Mon Sep 17 00:00:00 2001
+From: Anatolii Sakhnik <sakhnik@gmail.com>
+Date: Sun, 17 May 2026 17:26:49 +0000
+Subject: [PATCH] fix build
+
+---
+ variants/native/portduino/platformio.ini | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/variants/native/portduino/platformio.ini b/variants/native/portduino/platformio.ini
+index 474d45492..e46394b9b 100644
+--- a/variants/native/portduino/platformio.ini
++++ b/variants/native/portduino/platformio.ini
+@@ -1,12 +1,14 @@
+ [native_base]
+ extends = portduino_base
+ build_flags = ${portduino_base.build_flags} -I variants/native/portduino
+-  -I /usr/include
+-board = cross_platform
++board = buildroot
+ board_level = extra
+ lib_deps = 
+   ${portduino_base.lib_deps}
+   melopero/Melopero RV3028@^1.1.0
++  https://github.com/adafruit/Adafruit_BusIO/archive/refs/tags/1.17.4.zip
++  https://github.com/DFRobot/DFRobot_RTU/archive/refs/tags/V1.0.6.zip
++
+ 
+ build_src_filter = ${portduino_base.build_src_filter}
+ 
+-- 
+2.54.0
+
