@@ -1,0 +1,11 @@
+[Unit]
+Description=Generate Meshtastic TLS certificate on first boot
+ConditionPathExists=!/etc/meshtasticd/ssl/certificate.pem
+Before=meshtasticd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/meshtastic-certgen.sh
+
+[Install]
+WantedBy=multi-user.target

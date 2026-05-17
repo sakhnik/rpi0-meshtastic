@@ -3,7 +3,7 @@ require recipes-core/images/core-image-minimal.bb
 inherit extrausers
 
 IMAGE_INSTALL:append = " \
-  libgpiod meshtasticd meshtastic-config \
+  libgpiod meshtasticd meshtastic-config meshtastic-web-ui \
   wpa-supplicant \
   iw \
   wireless-regdb \

@@ -38,9 +38,9 @@ SYSTEMD_SERVICE:${PN} = "meshtasticd.service"
 INSANE_SKIP:${PN} += "buildpaths"
 INSANE_SKIP:${PN}-dbg += "buildpaths"
 
-PACKAGECONFIG ??= ""
+PACKAGECONFIG ??= "web"
 PACKAGECONFIG[avahi] = "",,"avahi"
-PACKAGECONFIG[web] = "",,"libulfius liborcania libyder openssl gnutls"
+PACKAGECONFIG[web] = ",,libulfius liborcania libyder openssl gnutls"
 
 DEPENDS += " \
     bluez5 \

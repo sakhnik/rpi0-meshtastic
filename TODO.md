@@ -1,3 +1,2 @@
 - symlink dropbear config to /data
-- web ui
 - timezone
