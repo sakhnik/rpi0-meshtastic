@@ -15,7 +15,7 @@ DROPBEAR_EXTRA_ARGS = "-s"
 
 IMAGE_INSTALL:append = " dropbear"
 
-ROOTFS_POSTPROCESS_COMMAND += "setup_dropbear_keys;"
+ROOTFS_POSTPROCESS_COMMAND += "setup_dropbear_keys;add_dropbear_bind_mount;"
 
 setup_dropbear_keys () {
     install -d ${IMAGE_ROOTFS}/home/root/.ssh
@@ -26,4 +26,9 @@ setup_dropbear_keys () {
 
     chmod 700 ${IMAGE_ROOTFS}/home/root/.ssh
     chmod 600 ${IMAGE_ROOTFS}/home/root/.ssh/authorized_keys
+}
+
+add_dropbear_bind_mount() {
+    echo "/data/dropbear /etc/dropbear none bind,x-systemd.requires=data.mount 0 0" \
+        >> ${IMAGE_ROOTFS}${sysconfdir}/fstab
 }

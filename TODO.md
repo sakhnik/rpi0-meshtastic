@@ -1,2 +1,1 @@
-- symlink dropbear config to /data
 - timezone
