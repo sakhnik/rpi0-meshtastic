@@ -5,7 +5,9 @@ Lora:
   IRQ: 23
   Busy: 24
   Reset: 25
-  SX126X_ANT_SW: 6
+  TXen: 5
+  RXen: 6
+  SX126X_ANT_SW: 12
 
 Webserver:
   Port: 9443
