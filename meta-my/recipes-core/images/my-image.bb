@@ -8,12 +8,14 @@ IMAGE_INSTALL:append = " \
   iw \
   wireless-regdb \
   wifi-config \
+  dropbear \
+  tzdata \
 "
+
+TIMEZONE = "Europe/Kyiv"
 
 IMAGE_FEATURES += "ssh-server-dropbear"
 DROPBEAR_EXTRA_ARGS = "-s"
-
-IMAGE_INSTALL:append = " dropbear"
 
 ROOTFS_POSTPROCESS_COMMAND += "setup_dropbear_keys;add_dropbear_bind_mount;"
 
